@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+    <!-- Le travail est individuel. Toute forme de plagiat sera sanctionnée. -->
+    <nav>
+        <!-- Liens d'ancrage pour une navigation rapide -->
+        <a href="#about">À propos de moi</a> | 
+        <a href="#projects">Projets</a> | 
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Section À propos -->
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <p>Bonjour, je suis un développeur passionné avec une expertise en création de sites Web.</p>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projects">
+        <h2>Projets</h2>
+        <ul>
+            <li><a href="https://exemple1.com">Projet 1</a></li>
+            <li><a href="https://exemple2.com">Projet 2</a></li>
+            <li><a href="https://exemple3.com">Projet 3</a></li>
+        </ul>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <form action="envoyer_contact.php" method="POST">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Message :</label><br>
+            <textarea id="message" name="message" required></textarea><br>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+</body>
+</html>

@@ -1,0 +1,27 @@
+/* Centrage et couleur du titre */
+h1 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+/* Style des paragraphes */
+p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+/* Style de la liste : italique et alignement à droite */
+ul li {
+    font-style: italic;
+    text-align: right;
+}
+
+/* Responsive design pour les écrans de moins de 600px */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 16px;
+    }
+}

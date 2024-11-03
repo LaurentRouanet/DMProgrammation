@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice Simple</title>
+    <style>
+        /* Style de base pour la calculatrice */
+        .calculator { 
+            display: inline-block; 
+            padding: 20px; 
+            border: 1px solid #ccc; 
+            text-align: center; 
+        }
+        input[type="number"] { 
+            margin: 5px; 
+        }
+        button { 
+            margin: 5px; 
+            padding: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Le travail est individuel. Toute forme de plagiat sera sanctionnée. -->
+    <div class="calculator">
+        <h2>Calculatrice</h2>
+        <!-- Entrées pour les deux nombres -->
+        <input type="number" id="num1" placeholder="Nombre 1">
+        <input type="number" id="num2" placeholder="Nombre 2"><br>
+
+        <!-- Boutons pour les opérations -->
+        <button onclick="calculate('+')">+</button>
+        <button onclick="calculate('-')">-</button>
+        <button onclick="calculate('*')">*</button>
+        <button onclick="calculate('/')">/</button>
+        <button onclick="clearCalculator()">Effacer</button><br>
+
+        <!-- Affichage du résultat -->
+        <p>Résultat : <span id="result"></span></p>
+    </div>
+
+    <script>
+        /**
+         * Fonction pour effectuer le calcul en fonction de l'opération choisie.
+         * @param {string} operation - L'opération choisie : "+", "-", "*", "/".
+         */
+        function calculate(operation) {
+            // Récupération et conversion des valeurs entrées
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            let result = 0;
+
+            // Vérifie si les entrées sont des nombres
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Entrez des valeurs numériques valides.");
+                return;
+            }
+
+            // Effectue le calcul en fonction de l'opération
+            switch (operation) {
+                case '+': 
+                    result = num1 + num2; 
+                    break;
+                case '-': 
+                    result = num1 - num2; 
+                    break;
+                case '*': 
+                    result = num1 * num2; 
+                    break;
+                case '/': 
+                    result = num2 !== 0 ? num1 / num2 : "Division par zéro !"; 
+                    break;
+            }
+
+            // Affiche le résultat
+            document.getElementById('result').textContent = result;
+        }
+
+        /**
+         * Fonction pour réinitialiser la calculatrice.
+         */
+        function clearCalculator() {
+            document.getElementById('num1').value = '';
+            document.getElementById('num2').value = '';
+            document.getElementById('result').textContent = '';
+        }
+    </script>
+</body>
+</html>
